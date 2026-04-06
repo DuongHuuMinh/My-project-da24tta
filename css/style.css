@@ -8,18 +8,11 @@ img {
 	padding: 8px;
 	margin:10px;
 }
-
-a{
-	font-weight: bold;
-}
 p {
   text-indent: 30px;
+  font-size:25px;
 }
 body{
 	background-image: url("../assets/images/anhnen1.jpg");
 	background-size: cover;
-	background-repeat: no-repeat;
-}
-p{
-	font-size:25px;
 }
