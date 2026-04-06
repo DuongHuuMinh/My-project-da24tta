@@ -2,9 +2,6 @@ img {
 	width:150px;height:150px;
 	border-radius: 50%;
 }
-h1{
-	color: blue;
-}
  #tt, tr, td{
 	border-collapse:collapse;
 	border: 1px solid black;
@@ -22,5 +19,10 @@ p {
   text-indent: 30px;
 }
 body{
-	background-image: "..\assets\images\anhnen.jpg";
+	background-image: url("../assets/images/anhnen1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+p{
+	font-size:25px;
 }
