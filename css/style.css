@@ -6,12 +6,9 @@ img {
 	border-collapse:collapse;
 	border: 1px solid black;
 	padding: 8px;
+	margin:10px;
 }
- #gt{
-	border-collapse:collapse;
-	border: 2px solid black;
-	margin-right:0px;
-}
+
 a{
 	font-weight: bold;
 }
