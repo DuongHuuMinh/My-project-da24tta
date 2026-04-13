@@ -1,0 +1,27 @@
+*{
+	margin-left: 12px;
+	font-family:'Times New Roman', Times, serif;
+	margin: 2px ;
+	padding: 2px;
+}
+.control{
+	display: block;
+	padding-left: 10px;
+	margin-left: 10px;
+	border: 1px solid greenyellow;
+	background-color: aliceblue;
+}
+.container{
+		padding: 2px;
+		margin: 0px;
+		background-color: rgb(95, 162, 224);
+}
+h3{
+	text-transform: uppercase;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 10px;
+}
+
+
