@@ -10,11 +10,12 @@
 	margin-left: 10px;
 	border: 1px solid greenyellow;
 	background-color: aliceblue;
+	color:rgba(0, 0, 0, 0.836);
 }
 .container{
 		padding: 2px;
 		margin: 0px;
-		background-color: rgb(95, 162, 224);
+		background-color: rgb(139, 187, 231);
 }
 h3{
 	text-transform: uppercase;
@@ -23,5 +24,10 @@ h3{
 	text-align: center;
 	padding: 10px;
 }
-
+input.button{
+	background-color:rgb(181, 212, 240);
+	color:black;
+	border:none;
+	boder-radius: 5px;
+}
 
