@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký CLB ITHUB</title>
+   	<link href = "..\css\stype3.css" rel = "stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h2>ĐĂNG KÝ THÀNH VIÊN CLB ITHUB</h2>
+        
+        <form action="#" method="POST">
+            
+            <div class="control">
+                <label for="hoten">Họ tên:</label>
+                <input type="text" id="hoten" name="hoten" placeholder="Nhập họ và tên" required>
+            </div>
+
+            <div class="control">
+                <label for="mssv">MSSV:</label>
+                <input type="text" id="mssv" name="mssv" placeholder="Ví dụ: 110124122" required>
+            </div>
+
+            <div class="control">
+                <label for="malop">Mã lớp:</label>
+                <select id="malop" name="malop" required>
+                    <option value="">Chọn mã lớp</option>
+                    <option value="DA24TTA">DA24TTA</option>
+                    <option value="DA24TTB">DA24TTB</option>
+                    <option value="DA24TTC">DA24TTC</option>
+                    <option value="DA24TTC">DA24TTD</option>
+                    <option value="Khac">Khác...</option>
+                </select>
+            </div>
+
+            <div class="control">
+                <label>Giới tính:</label>
+                <div class="radio">
+                    <label><input type="radio" name="gioitinh" value="Nam" required> Nam</label>
+                    <label><input type="radio" name="gioitinh" value="Nu"> Nữ</label>
+                </div>
+            </div>
+
+            <div class="control">
+                <label>Điểm mạnh:</label>
+                <div class="checkbox">
+					<ul>
+						<li>
+							<label><input type="checkbox" name="diemmanh" value="LapTrinh"> Lập trình</label>
+						</li>
+						<li>
+							<label><input type="checkbox" name="diemmanh" value="ThietKe"> Thiết kế</label>
+						</li>
+						<li>
+							<label><input type="checkbox" name="diemmanh" value="GiaoTiep"> Giao tiếp</label>
+						</li>
+						<li>
+							<label><input type="checkbox" name="diemmanh" value="LamViecNhom"> Làm việc nhóm</label>
+						</li>
+						<li>
+							<label><input type="checkbox" name="diemmanh" value="ToChuc"> Tổ chức sự kiện</label>
+						</li>
+						<li>
+							<label><input type="checkbox" name="diemmanh" value="Khac"> Khác</label>
+						</li>
+					</ul>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit" class="btn-submit">Đăng ký</button>
+                <button type="reset" class="btn-reset">Nhập lại</button>
+            </div>
+			<a href ="..\index.html" target = "_blank">Quay về trang chủ</a>
+        </form>
+    </div>
+	
+</body>
+</html>
