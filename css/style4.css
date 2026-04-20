@@ -1,0 +1,21 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+	padding: 3px;
+
+}
+body {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+table, tr, td{
+    
+    border-collapse: collapse;
+    text-align: center;
+}
