@@ -1,4 +1,3 @@
-
 let soLuong = document.getElementsByClassName("sl");
 let donGia = document.getElementsByClassName("dg");
 let thanhtien = document.getElementsByClassName("tht");
