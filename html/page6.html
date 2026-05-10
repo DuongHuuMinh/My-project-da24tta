@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành page 6</title>
+    <link href = "../css/style6.css" rel = "stylesheet">
+</head>
+<body>
+    <script>
+
+        const productItem=document.createElement("div");
+        productItem.setAttribute("class","productItem");
+        //tạo khung chứa 1
+        const productDiv1=document.createElement("div");
+        productDiv1.setAttribute("class","productDiv1");
+
+        const productImage1 = document.createElement("img");
+        productImage1.setAttribute("src","../assets/images/iphone.jpg");
+        productImage1.setAttribute("alt","Điện thoại Iphone");
+    
+        productDiv1.appendChild(productImage1);
+        //tạo khung chứa 2
+        const productInfo=document.createElement("div");
+        productInfo.setAttribute("class","productInfo");
+
+        const productDiv2=document.createElement("div");
+        productDiv2.setAttribute("class","productDiv2");
+
+        const productName = document.createElement("p");
+        const productNameText = document.createTextNode("Điện thoại Iphone");
+        
+        const productPrice = document.createElement("p"); // Tạo thêm một thẻ p cho giá
+        const productPriceText = document.createTextNode("17.000.000vnđ");
+
+        productName.appendChild(productNameText);
+        productPrice.appendChild(productPriceText);
+        productDiv2.appendChild(productName);
+        productDiv2.appendChild(productPrice);
+        // Gán vào Item
+        productItem.appendChild(productDiv1);
+        productItem.appendChild(productDiv2);
+        // Gán vào Body
+        document.body.appendChild(productItem);
+
+        const productItem=document.createElement("div");
+        productItem.setAttribute("class","productItem");
+        //tạo khung chứa 1
+        const productDiv1=document.createElement("div");
+        productDiv1.setAttribute("class","productDiv1");
+
+        const productImage1 = document.createElement("img");
+        productImage1.setAttribute("src","../assets/images/samsung.jpg");
+        productImage1.setAttribute("alt","Điện thoại Iphone");
+    
+        productDiv1.appendChild(productImage1);
+        //tạo khung chứa 2
+        const productInfo=document.createElement("div");
+        productInfo.setAttribute("class","productInfo");
+
+        const productDiv2=document.createElement("div");
+        productDiv2.setAttribute("class","productDiv2");
+
+        const productName = document.createElement("p");
+        const productNameText = document.createTextNode("Điện thoại Samsung");
+        
+        const productPrice = document.createElement("p"); // Tạo thêm một thẻ p cho giá
+        const productPriceText = document.createTextNode("20.190.000vnđ");
+
+        productName.appendChild(productNameText);
+        productPrice.appendChild(productPriceText);
+        productDiv2.appendChild(productName);
+        productDiv2.appendChild(productPrice);
+        // Gán vào Item
+        productItem.appendChild(productDiv1);
+        productItem.appendChild(productDiv2);
+        // Gán vào Body
+        document.body.appendChild(productItem);
+        
+    </script>
+</body>
+</html>

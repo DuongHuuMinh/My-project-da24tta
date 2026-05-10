@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hành page 6</title>
+    <link href = "../css/style6.css" rel = "stylesheet">
+</head>
+<body>
+
+    <script>
+
+    function taoSanPham(tenMay, giaTien, linkAnh) {
+    
+    // ==========================================
+    // 1. TẠO HỘP TO NGOÀI CÙNG
+    // ==========================================
+    const productItem = document.createElement("div");
+    productItem.setAttribute("class", "productItem");
+
+
+    // ==========================================
+    // 2. LẮP RÁP KHUNG 1 (CHỨA ẢNH)
+    // ==========================================
+    const productDiv1 = document.createElement("div");
+    productDiv1.setAttribute("class", "productDiv1");
+
+    const productImage = document.createElement("img");
+    productImage.setAttribute("src", linkAnh);
+    productImage.setAttribute("alt", tenMay);
+
+    // Gắn ảnh vào khung 1
+    productDiv1.appendChild(productImage);
+
+
+    // ==========================================
+    // 3. LẮP RÁP KHUNG 2 (CHỨA CHỮ VÀ GIÁ)
+    // ==========================================
+    const productDiv2 = document.createElement("div");
+    productDiv2.setAttribute("class", "productDiv2");
+
+    // Tạo phần Tên máy
+    const productName = document.createElement("p");
+    const productNameText = document.createTextNode(tenMay);
+    productName.appendChild(productNameText);
+    
+    // Tạo phần Giá tiền
+    const productPrice = document.createElement("p"); 
+    const productPriceText = document.createTextNode(giaTien);
+    productPrice.appendChild(productPriceText);
+
+    // Gắn tên và giá vào khung 2
+    productDiv2.appendChild(productName);
+    productDiv2.appendChild(productPrice);
+
+
+    // ==========================================
+    // 4. LẮP GHÉP TẤT CẢ VÀO HỘP TO
+    // ==========================================
+    productItem.appendChild(productDiv1);
+    productItem.appendChild(productDiv2);
+
+    // Trả sản phẩm đã hoàn thiện ra ngoài
+    return productItem;
+}
+
+// ---------------------------------------------------------
+// CÁCH SỬ DỤNG BÊN NGOÀI:
+// ---------------------------------------------------------
+
+// Bạn chỉ cần gọi hàm và đưa nguyên liệu vào:
+const iphone = taoSanPham("Điện thoại Iphone", "17.000.000vnđ", "../assets/images/iphone.jpg");
+const samsung = taoSanPham("Điện thoại Samsung", "20.190.000vnđ", "../assets/images/samsung.jpg");
+
+// Cuối cùng đẩy ra màn hình
+document.body.appendChild(iphone);
+document.body.appendChild(samsung);
+
+    </script>
+
+</body>
+</html>
