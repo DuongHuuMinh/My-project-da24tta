@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>thực hành page 6</title>
-    <link href = "../css/style6.css" rel = "stylesheet">
+    <link href = "../css/style8.css" rel = "stylesheet">
     <script src="../js/lib5.js"></script>
 </head>
 <body>
     <div class = "container">
-        <div id = "product-list" class =  "row">
-
+        <div id = "product-list">
 
         </div>
 
     </div>
     
     <script>
-        //Lặp 
+       /* //Lặp 
         for(let i = 0; i< productList.length; i++)
         {
             const item = taoSanPham(productList[i].name, productList[i].price, productList[i].image)
             document.getElementById("product-list").appendChild(item);
-        }
-    
+        }*/
+    const listContainer = document.getElementById('product-list');
+    productList.forEach(product => {
+        const item = taoSanPham(product.id, product.name, product.price, product.image,product.productLink);
+        document.getElementById("product-list").appendChild(item);
+     });
     </script>
 
 </body>
