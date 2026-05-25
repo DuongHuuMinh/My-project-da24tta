@@ -2,30 +2,33 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang chủ | Quản lý bài tập</title>
-    <link href="css/style_index.css" rel="stylesheet">
+    <title>Shop Hữu Minh | Trang Chủ</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js"></script>
 </head>
 <body>
-
-    <header>
-        <h1>Dự Án Lập Trình Web</h1>
-        <p>Danh sách các bài thực hành HTML, CSS và JavaScript</p>
-    </header>
-
-    <div class="grid-container">
-        <a href="html/page1.html" target="_blank" class="menu-card">Thông tin cá nhân</a>
-        <a href="html/page2.html" target="_blank" class="menu-card">Đăng nhập</a>
-        <a href="html/page3.html" target="_blank" class="menu-card">Bạn chưa có tài khoản</a>
-        <a href="html/page4.html" target="_blank" class="menu-card">Làm quen với JS</a>
-        <a href="html/page5.html" target="_blank" class="menu-card">Bài tập số 5</a>
-        <a href="html/page6.html" target="_blank" class="menu-card">Bài tập số 6</a>
-        <a href="html/page7.html" target="_blank" class="menu-card">Bài tập số 7</a>
-        <a href="html/page8.html" target="_blank" class="menu-card">Bài tập số 8</a>
+    
+    <div style="text-align: center; padding: 20px; background-color: #f8f9fa; margin-bottom: 20px; border-bottom: 2px solid #ccc;">
+        <h1 style="color: #2c3e50; text-transform: uppercase; margin: 0 0 10px 0;">Shop Hữu Minh</h1>
+        <p style="color: #16a085; font-weight: bold; font-style: italic; margin: 0 0 15px 0;">Thân thiện - Uy tín - Trách nhiệm</p>
+        <a href="cart.html" style="display: inline-block; padding: 10px 20px; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            🛒 Đi đến Giỏ hàng của bạn
+        </a>
     </div>
 
-    <footer class="footer-custom">
-        <p>Web được thực hiện bởi <strong>Dương Hữu Minh</strong></p>
-    </footer>
+    <h2 style="text-align: center; margin-bottom: 20px; color: #333;">DANH SÁCH CÁC SẢN PHẨM</h2>
+
+    <div class="container">
+        <div id="product-list"></div>
+    </div>
+    
+    <script>
+        const listContainer = document.getElementById('product-list');
+        productList.forEach(product => {
+            const item = taoSanPham(product.id, product.name, product.price, product.image, product.productLink);
+            document.getElementById("product-list").appendChild(item);
+        });
+    </script>
 
 </body>
 </html>
