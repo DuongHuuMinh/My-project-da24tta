@@ -1,0 +1,63 @@
+/* --- Khung chứa danh sách (Có thanh cuộn ngang) --- */
+#product-list {
+    display: flex;          
+    flex-wrap: nowrap;       
+    gap: 25px;               
+    justify-content: flex-start;
+    padding: 20px;
+    padding-bottom: 25px; 
+    overflow-x: auto;
+    overflow-y: hidden; 
+}
+
+/* Trang điểm thanh cuộn ngang */
+#product-list::-webkit-scrollbar { height: 8px; }
+#product-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+#product-list::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 10px; }
+#product-list::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+/* --- Từng thẻ sản phẩm --- */
+.productItem {
+    width: 240px;           
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;     
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 0 0 auto; 
+}
+
+.productItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Hình ảnh --- */
+.productDiv1 img {
+    width: 100%;             
+    height: 180px;           
+    object-fit: contain; 
+    border-radius: 8px;
+}
+
+/* --- Trang trí phần chữ --- */
+.productDiv2 {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.productDiv2 p {   
+    margin: 0; 
+}
+.productDiv2 p:nth-child(1) {
+    font-weight: bold; font-size: 18px; color: #333; 
+}
+.productDiv2 p:nth-child(2) {
+    font-weight: bold; font-size: 16px; color: #e74c3c; 
+}
+.productDiv2 p:nth-child(3) { 
+    font-size: 13px; color: #7f8c8d; font-style: italic; 
+}

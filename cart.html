@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng | Shop Hữu Minh</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+</head>
+<body style="background-color: #f4f7f6; font-family: Arial, sans-serif;">
+
+    <div style="text-align: center; padding: 20px; background-color: #fff; margin-bottom: 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <h1 style="color: #2c3e50; margin-bottom: 15px;">🛒 GIỎ HÀNG CỦA BẠN</h1>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <a href="index.html" style="padding: 10px 20px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                ⬅ Quay lại Cửa hàng
+            </a>
+            <button onclick="xoaGioHang()" style="padding: 10px 20px; background-color: #c0392b; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+                🗑️ Xóa sạch giỏ hàng
+            </button>
+        </div>
+    </div>
+
+    <div id="cart-product-list" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; padding: 20px;">
+    </div>
+
+    <script>
+        const cartList = document.getElementById("cart-product-list");
+        let gioHang = JSON.parse(localStorage.getItem("gioHangCuaMinh")) || [];
+
+        if (gioHang.length === 0) {
+            cartList.innerHTML = "<h3 style='color: #e74c3c;'>Giỏ hàng đang trống! Hãy đi mua sắm nào.</h3>";
+        } else {
+            gioHang.forEach(sp => {
+                cartList.innerHTML += `
+                    <div class="productItem" style="flex: 0 0 auto;">
+                        <div class="productDiv1">
+                            <img src="${sp.image}" alt="${sp.name}">
+                        </div>
+                        <div class="productDiv2">
+                            <p style="font-weight: bold; font-size: 18px; color: #333;">${sp.name}</p>
+                            <p style="font-weight: bold; font-size: 16px; color: #e74c3c;">${sp.price}</p>
+                            <p style="color: #2c3e50; font-size: 15px; margin-top: 5px;">Số lượng: <b>${sp.soLuong}</b></p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
