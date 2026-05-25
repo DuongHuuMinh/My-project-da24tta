@@ -1,0 +1,89 @@
+/* --- Reset cơ bản --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* --- Nền trang web & Ép footer xuống đáy --- */
+body {
+    background-color: #110b85;
+    color: #333;
+    
+    /* Sticky Footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Cao bằng 100% màn hình */
+}
+
+/* --- Phần Tiêu đề (Header) --- */
+header {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #121313;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #94ab23;
+    font-size: 16px;
+}
+
+/* --- Khung lưới chứa bài tập --- */
+.grid-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động chia cột */
+    gap: 20px;
+    padding: 0 20px;
+    
+    flex: 1; /* Chiếm phần trống để đẩy footer xuống */
+}
+
+/* --- Thiết kế từng Thẻ link (Card) --- */
+.menu-card {
+    display: block;
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-decoration: none; /* Bỏ gạch chân của link */
+    color: #2980b9;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+/* --- Hiệu ứng khi rê chuột vào Card --- */
+.menu-card:hover {
+    transform: translateY(-5px); /* Nổi lên */
+    border-color: #3498db;       /* Viền sáng màu */
+    box-shadow: 0 8px 15px rgba(52, 152, 219, 0.2);
+    color: #1abc9c;
+}
+
+/* --- Chân trang (Footer) --- */
+.footer-custom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: #7f8c8d; /* Chữ màu xám */
+    font-size: 15px;
+    border-top: 1px solid #dcdde1; /* Viền ngang phân cách */
+    background-color: transparent;
+}
+
+/* --- Định dạng tên người thiết kế --- */
+.footer-custom strong {
+    color: #e4e7e9; /* Chữ màu xanh */
+    font-weight: 700;
+}
